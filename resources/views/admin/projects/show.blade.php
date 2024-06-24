@@ -10,16 +10,15 @@
             <dt class="fs-1">Title:</dt>
             <dd class="fw-semibold"> {{ $project->title }} </dd>
 
+            <dt class="fs-1">Type:</dt>
+            <dd class="fw-semibold"> {{ $project->type?->name }} </dd>
+
             <dt class="fs-3">Description:</dt>
             <dd class="fw-semibold">{{ $project->description }}</dd>
 
             <dt class="fs-3">Slug:</dt>
             <dd class="fw-semibold">{{ $project->slug }}</dd>
         </dl>
-
-        <h2>Title: {{ $project->title }}</h2>
-        <p>Description: {{ $project->description }}</p>
-        <p>Slug: {{ $project->slug }}</p>
     </div>
 
     <div class="container py-5">

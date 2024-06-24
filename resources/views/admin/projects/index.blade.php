@@ -23,6 +23,7 @@
             <thead>
                 <tr>
                     <th scope="col">Title</th>
+                    <th scope="col">Type</th>
                     <th scope="col">Description</th>
                     <th scope="col">Slug</th>
                     <th scope="col">Actions</th>
@@ -32,6 +33,7 @@
                 @foreach ($projectsArray as $project)
                     <tr>
                         <th scope="row"> {{ $project->title }} </th>
+                        <td> {{ $project->type?->name }} </td>
                         <td> {{ $project->description }} </td>
                         <td> {{ $project->slug }} </td>
                         <td>
