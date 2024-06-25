@@ -24,7 +24,8 @@ class UpdateProjectRequest extends FormRequest
     {
         return [
             'title' =>  [ 'required',  ValidationRule::unique('projects')->ignore($this->project)],
-            'description' => ['min:5', 'max:300']
+            'description' => ['min:5', 'max:300'],
+            'type_id' => [ 'required' ]
         ];
     }
 
@@ -40,6 +41,7 @@ class UpdateProjectRequest extends FormRequest
             'title.unique' => 'Non ci possono essere due progetti con lo stesso titolo',
             'description.min' => 'Inserire almeno 5 caratteri',
             'description.max' => 'Limite di caratteri inseribili raggiunto (300 caratteri)',
+            'type_id.required' => 'Il campo del tipo di progetto non può essere vuoto',
         ];
     }
 }
